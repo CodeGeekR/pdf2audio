@@ -4,6 +4,13 @@ import PyPDF2
 from gtts import gTTS
 
 def convert_pdf_to_audio(pdf_path):
+    """
+    Esta función convierte un archivo PDF en un archivo de audio.
+    Primero, abre el archivo PDF y extrae el texto.
+    Luego, utiliza Google Text-to-Speech para convertir el texto en audio.
+    Finalmente, guarda el audio en un archivo mp3.
+    """
+    
     # Abre el archivo PDF en modo lectura binaria
     pdf_file = open(pdf_path, 'rb')
 
@@ -33,7 +40,7 @@ def convert_pdf_to_audio(pdf_path):
 if __name__ == "__main__":
     # Comprueba si se proporcionó un argumento de línea de comandos
     if len(sys.argv) != 2:
-        print('Uso: python3 script.py <ruta_del_pdf>')
+        print('Uso: python3 main.py <ruta_del_pdf>')
         sys.exit(1)
 
     # Convierte el PDF a audio
